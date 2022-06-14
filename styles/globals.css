@@ -14,3 +14,29 @@ a {
 * {
   box-sizing: border-box;
 }
+.BetCardContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 200px;
+}
+
+.BetCardP1 {
+  color: red;
+  background: blue;
+  width: 50%;
+  height: 100%;
+}
+.BetCardP2 {
+  width: 50%;
+  color: green;
+  background: red;
+  display: grid;
+}
+
+.BetCardP2 > div {
+  margin-left: auto;
+  margin-right: 0;
+}
