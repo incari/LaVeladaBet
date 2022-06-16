@@ -23,15 +23,12 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <ReactPlayer
-          url="https://www.twitch.tv/asmongold"
+          url="https://www.twitch.tv/ibai"
           muted={true}
           width={size.width}
           height={size.height}
         />
 
-        <BetCard />
-        <BetCard />
-        <BetCard />
         <BetCard />
       </main>
 
