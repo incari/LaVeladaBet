@@ -122,7 +122,7 @@ const Player1 = ({ percentage = 60 }) => {
           />
         </span>
       </Box>
-      <form style={{ display: "flex" }}>
+      <form style={{ display: "flex", marginTop: "10px" }}>
         <Input
           style={{
             width: "50%",
@@ -168,7 +168,6 @@ const Player2 = ({ percentage = 40 }) => {
           </Typography>
           <BorderLinearProgress
             sx={{
-              transform: "rotate(180deg)",
               height: 10,
             }}
             variant="determinate"
@@ -191,7 +190,7 @@ const Player2 = ({ percentage = 40 }) => {
           </span>
         </Stats>
       </Box>
-      <form style={{ display: "flex" }}>
+      <form style={{ display: "flex", marginTop: "10px" }}>
         <Input
           style={{
             width: "50%",
@@ -217,7 +216,7 @@ export function BetCard() {
       <Card
         sx={{
           minHeight: 200,
-          maxWidth: "400px",
+          maxWidth: 340,
           backgroundColor: "#181818",
           display: "column",
           textAlign: "center",
