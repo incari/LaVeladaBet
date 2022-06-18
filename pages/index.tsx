@@ -37,7 +37,7 @@ const Home: NextPage = () => {
           height={size.height}
         />
 
-        <div style={{ width: "100%" }} className=".swiper-container">
+        <div style={{ width: size.width }} className=".swiper-container">
           <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
             <SwiperSlide>
               <BannerCombat fight={CAROLASPURSITO} />

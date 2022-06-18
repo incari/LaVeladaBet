@@ -1,13 +1,14 @@
+import { CSSProperties } from "@mui/styled-engine";
 import { useEffect, useState } from "react";
 
 type windowSize = {
-  width: number | undefined;
-  height: number | undefined;
+  width: string | number | undefined;
+  height: string | number | undefined;
 };
 
 export const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState<windowSize>({
-    width: 700,
+    width: "100vw",
     height: 393,
   });
 
