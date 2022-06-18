@@ -1,18 +1,26 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
-import { Carousel } from "react-responsive-carousel";
-import { CarouselContainer } from "../components/CarouselContainer";
 import { useWindowSize } from "../hooks/useWindowSize";
 import styles from "../styles/Home.module.css";
+import { BannerCombat } from "../components/BannerCombat";
+
+import CAROLASPURSITO from "../public/fightcards/carola-spursito.webp";
+import JAGGERBUSTAMANTE from "../public/fightcards/jagger-bustamante.webp";
+import LUZULOLITO from "../public/fightcards/luzu-lolito.webp";
+import MOMOVIRUZZ from "../public/fightcards/momo-viruzz.webp";
+import ARIPARACETAMOR from "../public/fightcards/ari-paracetamor.webp";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
-import { BetCard } from "../components/BetCard";
+
+import "swiper/css";
+import "swiper/css/navigation";
 
 const Home: NextPage = () => {
   const size = useWindowSize();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -29,7 +37,25 @@ const Home: NextPage = () => {
           height={size.height}
         />
 
-        <BetCard />
+        <div style={{ width: "100%" }} className=".swiper-container">
+          <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+            <SwiperSlide>
+              <BannerCombat fight={CAROLASPURSITO} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BannerCombat fight={MOMOVIRUZZ} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BannerCombat fight={ARIPARACETAMOR} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BannerCombat fight={LUZULOLITO} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <BannerCombat fight={JAGGERBUSTAMANTE} />
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </main>
 
       <footer className={styles.footer}>
